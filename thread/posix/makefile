@@ -1,0 +1,3 @@
+CFALGS+=-pthread
+LDFLAGS+=-pthread
+
