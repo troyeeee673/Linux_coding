@@ -1,0 +1,5 @@
+;
+    if(!fps)
+    {
+        perror("fopen()");
+        exit(1);

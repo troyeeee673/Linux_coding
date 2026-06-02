@@ -1,0 +1,4 @@
+if (!fpd)
+        {
+            fclose(fp);
+            perror("

@@ -1,0 +1,4 @@
+it[32];
+    int i = 1;
+    FILE *fp = fopen(filename, "r+");
+   

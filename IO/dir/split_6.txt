@@ -1,0 +1,3 @@
+        fclose(fps);
+        perror("fopen()");
+        exit(1);

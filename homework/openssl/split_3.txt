@@ -1,0 +1,5 @@
+ if (!fp)
+    {
+        perror("fopen()");
+        exit(1);
+    

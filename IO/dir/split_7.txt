@@ -1,0 +1,6 @@
+
+    }
+
+    while(len = fread(buf, 1, BUFFERSIZE, fps))
+    {
+  

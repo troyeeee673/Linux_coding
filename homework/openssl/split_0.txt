@@ -1,0 +1,4 @@
+#define BUFSIZE 64
+
+const char split_result[][12];
+int slice(cha

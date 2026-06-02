@@ -1,0 +1,5 @@
+r * filename)
+{
+    char buf[BUFSIZE];
+    int len;
+    char spl

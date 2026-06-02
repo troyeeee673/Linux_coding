@@ -1,0 +1,31 @@
+#define BUFSIZE 64
+
+const char split_result[][12];
+int slice(char * filename)
+{
+    char buf[BUFSIZE];
+    int len;
+    char split[32];
+    int i = 1;
+    FILE *fp = fopen(filename, "r+");
+    if (!fp)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+
+    while ((len = fread(buf, 1, BUFSIZE, fp)))
+    {
+        sprintf(split, "split_%d.txt", i);
+        sprintf(split_result[i - 1], split);
+        FILE *fpd = fopen(split, "w+");
+        if (!fpd)
+        {
+            fclose(fp);
+            perror("fopen()");
+            exit(1);
+        }
+        fwrite(buf, 1, len, fpd);
+        i++;
+    }
+}

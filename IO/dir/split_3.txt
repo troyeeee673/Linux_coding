@@ -1,0 +1,3 @@
+f[BUFFERSIZE];
+    int len;
+    FILE* fps = fopen(argv[1], "rb")

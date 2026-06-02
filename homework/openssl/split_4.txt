@@ -1,0 +1,5 @@
+}
+
+    while ((len = fread(buf, 1, BUFSIZE, fp)))
+    {
+        
