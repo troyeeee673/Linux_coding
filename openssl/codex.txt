@@ -1,0 +1,12 @@
+codex 会话记录
+pattern
+codex resume 019e9340-224e-7e32-a7db-6c468529d1bf
+
+keil
+codex resume 019e954f-034f-7912-af1d-4194b16cbc81
+
+
+命令记录：
+ 这是我的项目复现代码"",但是没有达到源项目”“的预期效果。我在之前的项目”“中串口收发和OLED一切正常，可以对比成功项目和异常项目代码的串口和OLED部分，之前的项目"D:\嵌入式\FreeRTOS_lagebili\304ledDeviceTest 扩展"中led的
+  功能正常，可以对比成功项目和异常项目的led部分。对照源项目代码进行修改我的代码。将所有我当前项目代码都以源项目"D:
+  \pp\lgbl-driver-example-master\lgbl-driver-example-master"为目标进行对齐。
