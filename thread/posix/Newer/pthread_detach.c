@@ -3,6 +3,9 @@
 #include <unistd.h>
 #include <pthread.h>
 
+//分离的子线程，特点是子线程后台执行，不需要返回数据，不需要进行join,自动进行资源释放
+//缺点是无法返回数据
+
 void *task(void* arg)
 {
     int n = *((int *)arg);
