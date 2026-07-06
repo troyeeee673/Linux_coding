@@ -114,7 +114,8 @@ void *worker_thread(void *arg)
         node->task.function(node->task.arg);
         free(node);
     }
-    return NULL;
+    pthread_exit(NULL);
+    // return NULL;
 }
 
 // 处理客户端请求
@@ -183,7 +184,7 @@ int main()
 
     // 初始化线程池
     pool_init();
-    
+
     for (int i = 0; i < THREAD_MAX; i++)
     {
         pthread_create(&pool.threads[i], NULL, worker_thread, NULL);
@@ -202,12 +203,16 @@ int main()
         socklen_t addr_len = sizeof(addr_client);
         int fd_client = accept(fd, (struct sockaddr *)&addr_client, &addr_len);
 
-        int *client_fd = (int*)malloc(sizeof(int));
+        int *client_fd = (int *)malloc(sizeof(int));
         *client_fd = fd_client;
 
-        //将客户端处理任务加入线程池
+        // 将客户端处理任务加入线程池
         pool_add_task(handle_client, client_fd);
         printf("新客户端建立连接， fd = %d\n", fd_client);
+    }
+    for (int i = 0; i < THREAD_MAX; i++)
+    {
+        pthread_join(pool.threads[i],NULL);
     }
     close(fd);
     return 0;

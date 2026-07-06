@@ -84,6 +84,7 @@ if(setsockopt(sd,                    // socket 文件描述符
             perror("fork()");
             exit(1);
         }
+        //子进程
         if(pid == 0)
         {
             //只有当引用计数降为 0 时，socket 才会真正关闭
